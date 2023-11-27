@@ -120,7 +120,7 @@ def show_results(original, segmented):
 
     # Resulting Segmented Image in Black and White
     plt.subplot(122)
-    plt.imshow(segmented, cmap='gray', vmin=0, vmax=255)
+    plt.imshow(segmented, cmap='gray')
     plt.title('Resulting Segmented Image')
 
     plt.tight_layout()
@@ -128,9 +128,9 @@ def show_results(original, segmented):
 
 # Example usage:
 image_path = '2nd_year/Intro to AI/midterm/Lisa.jpg'
-k = 2
-window_size = 1
-min_cluster_size = 100
+k = 3
+window_size = 3
+min_cluster_size = 160
 
 # Perform neutrosophic k-means clustering
 resulting_segmented_image = neutrosophic_kmeans(image_path, k, window_size, min_cluster_size)
